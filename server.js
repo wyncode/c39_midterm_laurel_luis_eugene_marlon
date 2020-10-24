@@ -8,13 +8,16 @@ const app = express();
 const axios = require('axios');
 
 // JUST FOR DEMO PURPOSES, PUT YOUR ACTUAL API CODE HERE
-  app.get('/api/music', async (request, response) => {
+  app.get('/top50artists', async (request, response) => {
     const { data } = await axios.get(
-      'https://itunes.apple.com/search?term=jack+johnson'
+      `http://ws.audioscrobbler.com/2.0/?method=tag.gettopartists&tag=disco&api_key=${process.env.API_key}&format=json`
     );
     response.json(data);
+    console.log(data);
 });
 // END DEMO
+
+// http://ws.audioscrobbler.com/2.0/?method=tag.gettopartists&tag=disco&api_key=API_key&format=json
 
 if (process.env.NODE_ENV === 'production') {
   // Serve any static files

@@ -5,7 +5,7 @@ import './App.css';
 
 const App = () => {
   useEffect(() => {
-    fetch('/api/music')
+    fetch('/top50artists')
     .then((res) => res.json())
     .then((data) => console.log(data));
   }, []);
