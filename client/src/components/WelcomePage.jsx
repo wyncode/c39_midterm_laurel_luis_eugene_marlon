@@ -1,4 +1,10 @@
 import React from "react"; 
+
+// Have the basic layout of the page.
+// Have the user input their name in a form.
+// Make sure if the form is empty, the user will be prompted will an invalid input.
+// Redirect the user to the GamePage component once they hit Begin. 
+
 const WelcomePage = () => {
 return (
 <>
