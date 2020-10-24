@@ -1,5 +1,6 @@
 import React, { useContext } from 'react';
 import { AppContext } from '../context/AppContext';
+// REMOVE LINE 2, and REMOVE THE IMPORT OF "useContext"
 
 const ContextDemo = () => {
   const { contextMessage, contextMethod } = useContext(AppContext);
@@ -10,3 +11,5 @@ const ContextDemo = () => {
 };
 
 export default ContextDemo;
+
+// DELETE THIS FILE OR CHANGE THE COMPONENT THAT IS MADE (WHICH MEANS YOU NEED TO CHANGE THE FILE NAME ALSO)

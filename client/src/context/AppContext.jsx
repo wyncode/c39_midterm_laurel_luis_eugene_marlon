@@ -20,3 +20,5 @@ export const AppContextProvider = ({ children }) => {
     </AppContext.Provider>
   );
 };
+
+// DELETE THIS FILE AND THE DIRECTORY (CONTEXT)
