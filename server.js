@@ -5,14 +5,19 @@ if (process.env.NODE_ENV !== 'production') {
 const express = require('express');
 const path = require('path');
 const app = express();
+const axios = require('axios');
 
 // JUST FOR DEMO PURPOSES, PUT YOUR ACTUAL API CODE HERE
-app.get('/api/demo', (request, response) => {
-  response.json({
-    message: 'Hello from server.js'
-  });
+  app.get('/top50artists', async (request, response) => {
+    const { data } = await axios.get(
+      `http://ws.audioscrobbler.com/2.0/?method=tag.gettopartists&tag=disco&api_key=${process.env.API_key}&format=json`
+    );
+    response.json(data);
+    console.log(data);
 });
 // END DEMO
+
+// http://ws.audioscrobbler.com/2.0/?method=tag.gettopartists&tag=disco&api_key=API_key&format=json
 
 if (process.env.NODE_ENV === 'production') {
   // Serve any static files
