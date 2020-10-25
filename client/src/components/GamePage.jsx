@@ -14,38 +14,31 @@ import DropdownButton from 'react-bootstrap/DropdownButton'
 // *** Dificulty Page. 
 
 const GamePage = () => {
-let handleSubmit = (input) => {
-    if input = api.answer {
-       return {winLossPage}
-    } else {
 
-    }
 }
-    const isGuessCorrect = (usrGuess, correctAns) => {
-    let guess = usrGuess;
-    let answer = correctAns;
-
-
-return (
+    return (
+<div className="playHeader">
+<h1>Round {round}</h1>
+<div>{currentTrack.trackName}</div>
 <div>
-
-    
-<Form onSubmit={handleSubmit}>
-    <Form.Row>
-        <Form.Control
-            type="text"
-            placeholder="Guess that Artist!"
-            autoComplete="off"
-        ></Form.Control>
-        <button type="submit" 
-    </Form.Row>
-</Form>
-<DropdownButton id="dropdown-basic-button" title="Dropdown button">
-  
-  <Dropdown.Item>Name of Song/Album</Dropdown.Item>
-
-</DropdownButton>
+ <button
+className="recordButton"
+style={{ borderRadius: '50%', outline: 'none' }}
+onClick={toggleClick}>
+<img
+src={currentTrack.artworkUrl100}
+alt="Album Artwork"/>
+</button>
 </div>
-)
-}
+<Form onSubmit={handleSubmit}>
+<Form.Row>
+<Form.Control
+id="searchbar"
+size="lg"
+type="text"
+placeholder="Guess that Artist!"
+autoComplete="off"></Form.Control>
+</Form.Row>
+</Form>
+</div>);
 export default GamePage;
