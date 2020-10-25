@@ -8,10 +8,9 @@ import React from "react";
 const WelcomePage = () => {
 return (
 <>
-<h1>Welcome to SongBird</h1>
+<h1>Welcome to ByrdSong</h1>
 <h2>Insturctions</h2>
 <img></img>
-
 
 <h4>We wish you good fortune in the wars to come...</h4>
 

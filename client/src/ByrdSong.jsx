@@ -5,6 +5,8 @@ import NavMenu from './components/NavMenu';
 import AboutUs from './components/AboutUs';
 import WelcomePage from './components/WelcomePage';
 
+// Add Universal Footer with Wyncode's information. + Finish making the Nav universal to every page. 
+
 const ByrdSong = () => {
   useEffect(() => {
     fetch('/top50artists')
