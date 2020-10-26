@@ -11,7 +11,7 @@ return (
     <Card.Title>{albumname}</Card.Title>
 <Card.Text>{artistname}</Card.Text>
           </Card.Body>
-        </Card>
+        </Card> 
       );
 }
 export default AlbumCard;
