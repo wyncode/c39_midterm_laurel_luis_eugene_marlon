@@ -10,7 +10,7 @@ const NavMenu = () => {
           </Nav.Link>
         </Nav.Item>
         <Nav.Item as="li">
-          <Nav.Link href="/AboutUs">
+          <Nav.Link href="/aboutus">
             About Us
           </Nav.Link>
         </Nav.Item>
