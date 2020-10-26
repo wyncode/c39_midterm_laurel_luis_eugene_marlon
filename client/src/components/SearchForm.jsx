@@ -1,6 +1,8 @@
 import React from "react"
 import Form from 'react-bootstrap/Form';
 
+// Finish Design
+
 const SearchForm = ({ handleSubmitProp }) => {
     return (
         <Form onSubmit={handleSubmitProp} style={{ margin: '2rem' }}>

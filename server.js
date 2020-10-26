@@ -10,18 +10,20 @@ const axios = require('axios');
 // JUST FOR DEMO PURPOSES, PUT YOUR ACTUAL API CODE HERE
 app.get('/search', async (request,response) => {
 const { search } = request.query    
-const { data } = await axios.get(`https://itunes.apple.com/search?term=${search}&media=music&entity=musicTrack&song&attribute=artistTerm`);    
+const { data } = await axios.get(`https://itunes.apple.com/search?term=${search}&entity=album`);    
 response.json(data); 
-console.log(data);
+// console.log(data);
 });
 
-app.get('/api/example', (req, res) => {
+app.get('/album/:id', async (req, res) => {
+  const {id} = req.params
+const {data} = await axios.get(`https://itunes.apple.com/lookup?id=${id}&entity=song`)
+res.json(data)
 
 })
 // END DEMO
-
-// http://ws.audioscrobbler.com/2.0/?method=tag.gettopartists&tag=disco&api_key=API_key&format=json
-
+//term=${search}&
+//https://itunes.apple.com/search?term=${search}&media=music&entity=musicTrack&song&attribute=artistTerm
 if (process.env.NODE_ENV === 'production') {
   // Serve any static files
   app.use(express.static(path.join(__dirname, 'client/build')));

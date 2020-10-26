@@ -4,24 +4,28 @@ import Row from 'react-bootstrap/Row';
 import SearchForm from "./SearchForm"
 import AlbumCard from "./AlbumCard"
 
+/// Finish Layout + Design. Just have the search bar in the middle of the page. 
+/// Have the search bar redirect to the Album Card Component. 
+
 const WelcomePage = () => {    
-    const [search, setSearch] = useState('album')
+    // const [search, setSearch] = useState('album')
     const [song, setSong] = useState({})
 
-const handleSubmit = (event) => {
+const handleSubmit = async (event) => {
      event.preventDefault()
-     setSearch(event.target.elements.searchbar.value)
-     }
-
-useEffect(() => {
-    const fetchData = async () => {
-      let response = await axios.get(
-        `/search?search=${search}`
+     const response = await axios.get(
+        `/search?search=${event.target.elements.searchbar.value}`
       );
       setSong(response.data);
-    };
-    fetchData();
-  }, [search]);
+     
+     }
+
+// useEffect(() => {
+//     const fetchData = async () => {
+    
+//     };
+//     fetchData();
+//   }, [search]);
 
 return ( <div>
    <SearchForm handleSubmitProp={handleSubmit} />
@@ -30,9 +34,9 @@ return ( <div>
             console.log(song);
             return (
                 <AlbumCard
-                key={song.trackId}
-                id={song.trackId}
-                image={song. artworkUrl100}
+                key={song.collectionId}
+                id={song.collectionId}
+                image={song.artworkUrl100}
                 artistname={song.artistName}
                 albumname={song.collectionName}
               />

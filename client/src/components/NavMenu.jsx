@@ -1,12 +1,14 @@
 import React from "react"; 
 import Nav from 'react-bootstrap/Nav';
 
+// Finish Design
+
 const NavMenu = () => {
     return (
       <Nav activeKey="/" as="ul">
         <Nav.Item as="li">
           <Nav.Link  href="/">
-            Play
+            Albums
           </Nav.Link>
         </Nav.Item>
         <Nav.Item as="li">
