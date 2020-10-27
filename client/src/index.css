@@ -6,26 +6,6 @@ body {
   background-color: #202020;
 }
 
-.cards {
-  padding: 4rem;
-  background: #fff;
-}
-
-.cards__container {
-  display: flex;
-  flex-flow: column;
-  align-items: center;
-  max-width: 1120px;
-  width: 90%;
-  margin: 0 auto;
-}
-
-.cards__wrapper {
-  position: relative;
-  margin: 50px 0 45px;
-}
-
-
 .cards__item {
   display: flex;
   flex: 1;
@@ -48,14 +28,9 @@ body {
 .cards__item__pic-wrap {
   position: relative;
   width: 100%;
-  padding-top: 67%;
-  overflow: hidden;
+  /* overflow: hidden; */
 }
 
-.fade-img {
-  animation-name: fade-img;
-  animation-duration: 2s;
-}
 
 .cards__item__pic-wrap::after {
   content: attr(data-category);
@@ -71,7 +46,7 @@ body {
   box-sizing: border-box;
 }
 
-.cards__item__img {
+/* .cards__item__img {
   position: absolute;
   top: 0;
   right: 0;
@@ -84,20 +59,28 @@ body {
   max-height: 100%;
   object-fit: cover;
   transition: all 0.2s linear;
-}
+} */
 
 .cards__item__img:hover {
   transform: scale(1.1);
+  cursor: pointer;
 }
 
 .cards__item__info {
-  padding: 20px 30px 30px;
+  /* padding: 20px 30px 30px; */
 }
 
-.cards__item__text {
-  color: #252e48;
-  font-size: 18px;
-  line-height: 24px;
+.cards__album__text {
+  color: #FA233B;
+  font-size: 14px;
+  text-align: left;
+}
+
+.cards__artist_text {
+  color: #FA233B;
+  font-size: 10px;
+  text-align: left;
+  opacity: 40%;
 }
 
 @media only screen and (min-width: 1200px) {
@@ -110,13 +93,12 @@ body {
   .cards__items {
     display: flex;
   }
-}
-
-@media only screen and (max-width: 1024px) {
   .cards__item {
     margin-bottom: 2rem;
   }
 }
+
+
 * {
   background-color: #202020;
 }
