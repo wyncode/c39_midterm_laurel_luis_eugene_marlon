@@ -20,14 +20,9 @@ const handleSubmit = async (event) => {
      
      }
 
-// useEffect(() => {
-//     const fetchData = async () => {
-    
-//     };
-//     fetchData();
-//   }, [search]);
 
-return ( <div>
+
+return ( <div className="main">
    <SearchForm handleSubmitProp={handleSubmit} />
       <Row>
           {song?.results?.map((song) => {
