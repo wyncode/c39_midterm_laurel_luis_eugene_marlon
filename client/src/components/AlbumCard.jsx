@@ -7,15 +7,15 @@ import AlbumCardPage from './AlbumCardPage';
 
 const AlbumCard = ({id, albumname, artistname, image}) => { 
   
-  //whats this doing??
+  
     const history = useHistory()
 
     const handleClick = (id) => { 
      history.push(`/albumpage/${id}`)
     }
 return ( 
-      <>
-        <li list-style-type-none className='cards__item'>
+      <div>
+        <div list-style-type-none className='cards__item'>
           <Card className='cards__item__link' style={{ width: 150, margin: 10}} onClick={() => handleClick(id)}>
             <figure className='cards__item__pic-wrap'>
               <Card.Img className='cards__item__img' src={image} alt="Album Image"/>
@@ -25,8 +25,8 @@ return (
               <Card.Text><p className='cards__artist_text'>{artistname}</p></Card.Text>  
             </Card.Body>
           </Card>
-        </li>
-      </>
+        </div>
+      </div>
       );
      
 }
