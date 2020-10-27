@@ -9,9 +9,8 @@ const AlbumCard = ({id, albumname, artistname, image}) => {
         history.push(`/albumpage/${id}`)
     }
 return ( 
-        <Card style={{ width: 200, margin: 10 }} onClick={() => handleClick(id)}>
-          
-            <Card.Img src={image} />
+<Card style={{ width: 200, margin: 10 }} onClick={() => handleClick(id)}>
+<Card.Img src={image} />
         
           <Card.Body>
     <Card.Title>{albumname}</Card.Title>

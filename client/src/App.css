@@ -1,11 +1,15 @@
 /* JUST FOR DEMO PURPORSES, REPLACE WITH YOUR OWN CODE */
 
-#demo {
-  width: 100vw;
-  height: 100vh;
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
+.body { 
+  padding: 3rem;
+  column-count: 2;
+  column-width: 10px;
+  column-fill: auto;
+  margin-left: 6rem;
+  margin-top: 2rem;
 }
 
+.albumpic {
+  padding-bottom: 6rem;
+}
 /* END DEMO */
