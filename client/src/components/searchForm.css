@@ -20,6 +20,7 @@
     width: 500px;
     height: 90px;
     z-index: 5;
+    color: hotpink;
     
   }
 
@@ -43,8 +44,8 @@
 .fas:hover {
       color: rgb(130, 255, 105);
       justify-content: center;
-      position: relative;
       font-size: 100%;
+      box-shadow: #fa233b;
       
 
     
