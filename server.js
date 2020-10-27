@@ -22,8 +22,7 @@ res.json(data)
 
 })
 // END DEMO
-//term=${search}&
-//https://itunes.apple.com/search?term=${search}&media=music&entity=musicTrack&song&attribute=artistTerm
+
 if (process.env.NODE_ENV === 'production') {
   // Serve any static files
   app.use(express.static(path.join(__dirname, 'client/build')));
