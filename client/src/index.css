@@ -22,6 +22,9 @@ body {
   padding-top: 20px;
 }
 
+.sidenav ul {
+  margin-top: 100px;
+}
 .sidenav li {
   list-style-type: none;
   font-size: 25px;
