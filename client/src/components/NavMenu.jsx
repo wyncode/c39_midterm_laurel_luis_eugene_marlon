@@ -1,15 +1,17 @@
 import React from "react"; 
+import Nav from 'react-bootstrap/Nav';
 
 const NavMenu = () => {
   
   return (
-    <div class="sidenav">
-      <img src="./logo.png" alt="byrdsong logo"/>
-      <ul>
-        <li href="/">Albums</li>
-        <li href="/aboutus">About Us</li>
-      </ul>
-    </div>
+      <Nav className="nav" activeKey="/" as="ul">
+        <Nav.Item as="li"> 
+          <Nav.Link to="/">Home</Nav.Link>
+        </Nav.Item>
+        <Nav.Item as="li">
+          <Nav.Link href="/aboutus">About Us</Nav.Link>
+        </Nav.Item>
+      </Nav>
     );
   };
   
