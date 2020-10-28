@@ -1,15 +1,24 @@
-/* JUST FOR DEMO PURPORSES, REPLACE WITH YOUR OWN CODE */
-
-.body { 
-  padding: 3rem;
-  column-count: 2;
-  column-width: 10px;
-  column-fill: auto;
-  margin-left: 6rem;
-  margin-top: 2rem;
+.AlbumPageContainer {
+  margin-left: 200px;
+  margin-top: 130px;
 }
 
-.albumpic {
-  padding-bottom: 6rem;
+
+#songlist { 
+  color: white;
+  list-style-type: none;
+  border-top: 1px solid #E2E2E2;
 }
-/* END DEMO */
+
+#AlbumArtistName {
+  color:#C6363D;
+}
+
+#AlbumNames {
+color:#F4F4F4;
+}
+
+#AlbumGenre {
+  color:#A1A1A8
+}
+

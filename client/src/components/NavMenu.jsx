@@ -1,17 +1,22 @@
-import React from "react"; 
+import React from 'react';
+import Nav from 'react-bootstrap/Nav';
+import { Link } from 'react-router-dom';
 
 const NavMenu = () => {
-  
   return (
-    <div class="sidenav">
-      <img src="./logo.png" alt="byrdsong logo"/>
-      <ul>
-        <li href="/">Albums</li>
-        <li href="/aboutus">About Us</li>
-      </ul>
-    </div>
-    );
-  };
-  
+    <Nav className="nav" activeKey="/" as="ul">
+      <Nav.Item>
+        <Nav.Link as={Link} to="/">
+          Home
+        </Nav.Link>
+      </Nav.Item>
+      <Nav.Item>
+        <Nav.Link as={Link} to="/aboutus">
+          About Us
+        </Nav.Link>
+      </Nav.Item>
+    </Nav>
+  );
+};
 
 export default NavMenu;

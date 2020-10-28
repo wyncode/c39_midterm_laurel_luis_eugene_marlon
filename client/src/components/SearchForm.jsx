@@ -1,11 +1,12 @@
-import React from "react"
+import React from 'react';
 import Form from 'react-bootstrap/form';
-import "./searchForm.css";
+import './searchForm.css';
 
 
 // Finish Design
 
 const SearchForm = ({ handleSubmitProp }) => {
+
     return (
       
         <Form className="Welcome-page-form" onSubmit={handleSubmitProp} style={{ margin: '2rem' }} >
@@ -33,3 +34,5 @@ const SearchForm = ({ handleSubmitProp }) => {
 
 }
 export default SearchForm;
+
+
