@@ -154,6 +154,12 @@ li:hover {
   cursor: pointer;
 }
 
-/* .main {
-  background-image: url()
-} */
+.main {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  width: 100vw;
+  background-image: url(Background.jpg);
+  background-position: top center;
+  background-size: cover;
+}
