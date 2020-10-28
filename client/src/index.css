@@ -66,9 +66,9 @@ body {
   cursor: pointer;
 }
 
-.cards__item__info {
+/* .cards__item__info {
   /* padding: 20px 30px 30px; */
-}
+
 
 .cards__album__text {
   color: #F82D48;
@@ -108,24 +108,23 @@ body {
 
 * {
   background-color: #202020;
+  padding: 0;
+  margin: 0;
 }
 
 .nav {
+  margin: 0;
+  padding: 0;
   z-index: 1;
   background-color: #333333;
-  overflow-x: hidden;
 }
 
-.nav ul {
+.navitem {
   background-color: #333333;
-  margin-top: 10px;
+  margin: 10px;
 }
 
-.nav ul:hover {
-  color: #F82d48;
-}
-
-.nav li {
+.navlink {
   margin-right: 40px;
   list-style-type: none;
   font-size: 25px;
@@ -133,13 +132,10 @@ body {
   background-color: #333333;
 }
 
-li {
-  display: inline;
-}
-
-li:hover {
+.navlink:hover {
   color: #F82d48;;
   cursor: pointer;
+  transform: scale(1.2);
 }
 
 .main {

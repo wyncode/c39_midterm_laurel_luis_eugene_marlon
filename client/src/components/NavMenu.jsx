@@ -6,13 +6,13 @@ const NavMenu = () => {
   
   return (
       <Nav className="nav" activeKey="/" as="ul">
-      <Nav.Item>
-        <Nav.Link as={Link} to="/">
+      <Nav.Item className="navitem">
+        <Nav.Link as={Link} to="/" className="navlink">
           Home
         </Nav.Link>
-      </Nav.Item>
-      <Nav.Item>
-        <Nav.Link as={Link} to="/aboutus">
+      </Nav.Item >
+      <Nav.Item className="navitem">
+        <Nav.Link as={Link} to="/aboutus" className="navlink">
           About Us
         </Nav.Link>
       </Nav.Item>
