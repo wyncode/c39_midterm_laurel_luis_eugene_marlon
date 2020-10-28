@@ -3,8 +3,10 @@ import React from 'react';
 
 function Footer () {
     return (
-        <div>
-            <h1>This is a footer</h1>
+        <div className="wyncode">
+            <h1>
+                <img src="./images/wyncode.png" href="#"></img>
+            </h1>
         </div>
     )
 }

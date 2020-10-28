@@ -1,9 +1,8 @@
-import React from "react"; 
+import React from 'react';
 import Nav from 'react-bootstrap/Nav';
 import { Link } from 'react-router-dom';
 
 const NavMenu = () => {
-  
   return (
       <Nav className="nav" activeKey="/" as="ul">
       <Nav.Item className="navitem">
@@ -20,5 +19,4 @@ const NavMenu = () => {
   );
 };
   
-
 export default NavMenu;

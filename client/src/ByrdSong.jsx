@@ -8,23 +8,21 @@ import WelcomePage from './components/WelcomePage';
 import AlbumCardPage from './components/AlbumCardPage';
 import Footer from './components/Footer';
 
-// Add Universal Footer with Wyncode's information. + Finish making the Nav universal to every page. 
+// Add Universal Footer with Wyncode's information. + Finish making the Nav universal to every page.
 
 const ByrdSong = () => {
-
   return (
 
-  <BrowserRouter>
-  <NavMenu />
-  <Switch>
-  <Route exact path="/" component={WelcomePage} />
-  <Route exact path="/aboutus" component={AboutUs} />
-  <Route exact path="/albumpage/:id" component={AlbumPage} />
-  <Route exact path="/AlbumCardPage" component={AlbumCardPage} /> // added route
-  </Switch>
-  <Footer />
-  </BrowserRouter>
-
+    <BrowserRouter>
+      <NavMenu />
+      <Switch>
+        <Route exact path="/" component={WelcomePage} />
+        <Route exact path="/aboutus" component={AboutUs} />
+        <Route exact path="/albumpage/:id" component={AlbumPage} />
+        <Route exact path="/albumcardpage/:artist" component={AlbumCardPage} />
+      </Switch>
+      <Footer />
+    </BrowserRouter>
   );
 };
 
