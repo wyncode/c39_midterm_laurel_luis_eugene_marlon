@@ -9,8 +9,10 @@
 .cards__item {
   display: flex;
   flex: 1;
-  margin: 0 1rem;
+  /* margin: 0 1rem; */
   border-radius: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
 }
 
 .cards__item__link {
@@ -61,7 +63,7 @@
   transition: all 0.2s linear;
 } */
 
-.cards__item__img:hover {
+.cards__item__link:hover {
   transform: scale(1.1);
   cursor: pointer;
 }
@@ -83,12 +85,12 @@
   opacity: 40%;
 }
 
-@media only screen and (min-width: 1200px) {
+/* @media only screen and (min-width: 1200px) {
   .content__blog__container {
     width: 84%;
   }
-}
-
+} */
+/* 
 @media only screen and (min-width: 1024px) {
   .cards__items {
     display: flex;
@@ -96,10 +98,12 @@
   .cards__item {
     margin-bottom: 2rem;
   }
-}
+} */
 
 
 .sortButtons{
+  margin-top: 60px;
+  color: crimson;
   display: flex;
   justify-content: center;
   margin-bottom: 5rem;

@@ -31,14 +31,8 @@ function AlbumCardPage() {
   return (
     <>
       <div className="sortButtons">
-        <button className="a-zSort" onClick={handleSortAz}>
-          sort by a-z
-        </button>
-        <button className="z-aSort" onClick={handleSortZa}>
-          sort by z-a
-        </button>
         <button className="dateSort" onClick={handleSortRelease}>
-          release date
+          Sort By Release Date
         </button>
       </div>
       <div className="cards">
