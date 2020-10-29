@@ -1,8 +1,9 @@
 import React from 'react';
-import Luis from './images/LuisPerez.jpeg'
-import Laurel from './images/LaurelGalaty.jpeg'
-import Marlon from './images/IMG_9005.jpeg'
-// import Luis from './images/LuisPerez.jpeg'
+import Card from 'react-bootstrap/Card';
+import Luis from './images/LuisPerez.jpeg';
+import Laurel from './images/LaurelGalaty.jpeg';
+import Marlon from './images/IMG_9005.jpeg';
+import Eugene from './images/EugeneWashington.jpg';
 
 // Have the basic layout of the page. Which includes:
 // 1.our values which we would get from Wyncode.
@@ -13,47 +14,49 @@ const AboutUs = () => {
    <div className="about-us">
       <h1>About Us</h1> 
          
-         
-         <div className="column">
-            <div className="card ">
-               <img src={Luis}/>
-             <div className="container">
-               <h2>Luis</h2>
-                  <p className="title">Developer</p>
-            </div>
-         </div>
-      </div>
-      
-      
-      <div className="column">
-            <div className="card ">
-               <img src={Marlon}/>
-             <div className="container">
-               <h2>Marlon</h2>
-                  <p className="title">Developer</p>
-            </div>
-         </div>
-      </div>
-      
-      <div className="column">
+         <div className="portraits">
+         <Card className="column">
             <div className="card">
-               <img/>
+               <Card.Img src={Luis}/>
              <div className="container">
-               <h2>Eugene</h2>
-                  <p className="title">Developer</p>
+               <Card.Title>Luis</Card.Title>
+                  <Card.Text className="title">Developer</Card.Text>
             </div>
          </div>
-      </div>
+      </Card>
       
-      <div className="column">
+      
+      <Card className="column">
             <div className="card">
-               <img src={Laurel}/>
+               <Card.Img src={Marlon}/>
              <div className="container">
-               <h2>Laurel</h2>
-                  <p className="title">Developer</p>
+               <Card.Title>Marlon</Card.Title>
+                  <Card.Text className="title">Developer</Card.Text>
             </div>
          </div>
-      </div>
+      </Card>
+      
+      <Card className="column">
+            <div className="card">
+               <Card.Img src={Eugene}/>
+             <div className="container">
+               <Card.Title>Eugene</Card.Title>
+                  <Card.Text className="title">Developer</Card.Text>
+            </div>
+         </div>
+      </Card>
+      
+      <Card className="column">
+            <div className="card">
+               <Card.Img src={Laurel}/>
+             <div className="container">
+               <Card.Title>Laurel</Card.Title>
+                  <Card.Text className="title">Developer</Card.Text>
+            </div>
+         </div>
+      </Card>
+
+         </div>
    </div>
    );
 };
