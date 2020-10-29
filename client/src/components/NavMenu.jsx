@@ -7,12 +7,12 @@ const NavMenu = () => {
       <Nav className="nav" activeKey="/" as="ul">
       <Nav.Item className="navitem">
         <Nav.Link as={Link} to="/" className="navlink">
-          Home
+          <p class="navtext">Home</p>
         </Nav.Link>
       </Nav.Item >
       <Nav.Item className="navitem">
         <Nav.Link as={Link} to="/aboutus" className="navlink">
-          About Us
+        <p class="navtext">About Us</p>
         </Nav.Link>
       </Nav.Item>
     </Nav>
