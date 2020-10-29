@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import AlbumCard from './AlbumCard';
 import { useParams } from 'react-router-dom';
+import { Container } from 'react-bootstrap';
 import axios from 'axios';
 
 function AlbumCardPage() {
@@ -43,17 +44,19 @@ function AlbumCardPage() {
       <div className="cards">
         <div className="cards__container">
           <div className="cards__wrapper">
-            <ul className="cards__items">
-              {albums.map((album, index) => (
-                <AlbumCard
-                  key={index}
-                  id={album.collectionId}
-                  albumname={album.collectionName}
-                  artistname={album.artistName}
-                  image={album.artworkUrl100}
-                />
-              ))}
-            </ul>
+            <Container>
+              <div className="cards__item">
+                {albums.map((album, index) => (
+                  <AlbumCard
+                    key={index}
+                    id={album.collectionId}
+                    albumname={album.collectionName}
+                    artistname={album.artistName}
+                    image={album.artworkUrl100}
+                  />
+                ))}
+              </div>
+            </Container>
           </div>
         </div>
       </div>

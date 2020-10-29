@@ -13,7 +13,7 @@ const AlbumCard = ({ id, albumname, artistname, image }) => {
       <div className="cards__item">
         <Card
           className="cards__item__link"
-          style={{ width: 150, margin: 10 }}
+          style={{ width: 150, margin: 10, height: 280 }}
           onClick={() => handleClick(id)}
         >
           <figure className="cards__item__pic-wrap">
