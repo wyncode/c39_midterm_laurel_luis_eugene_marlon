@@ -1,16 +1,15 @@
-import React from 'react';
-import {Form} from 'react-bootstrap';
-import './searchForm.css';
+import React from "react"
+import Form from 'react-bootstrap/form';
+import "./searchForm.css";
 
 
 // Finish Design
 
 const SearchForm = ({ handleSubmitProp }) => {
-
     return (
       
         <Form className="Welcome-page-form" onSubmit={handleSubmitProp} style={{ margin: '2rem' }} >
-          <div className="welcome-page-searchbar">
+          <div className="welcome-page-searchbar" >
               <a className="btn" href="#">
                 {/* <img id="btn" className="img" src="./logo.png" alt="byrdsong logo"/> */}
                 {/* <i id="btn" className="fas fa-play"></i> */}
@@ -34,5 +33,3 @@ const SearchForm = ({ handleSubmitProp }) => {
 
 }
 export default SearchForm;
-
-
