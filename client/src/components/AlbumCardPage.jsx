@@ -27,23 +27,29 @@ function AlbumCardPage() {
       return new Date(a.releaseDate) - new Date(b.releaseDate);
     });
   };
+  
+  const handleSortPrice= () => {};
+
   return (
     <>
       <div className="sortButtons">
-        <button className="a-zSort" onClick={handleSortAz}>
+        <button className="btn" onClick={handleSortAz}>
           sort by a-z
         </button>
-        <button className="z-aSort" onClick={handleSortZa}>
+        <button className="btn" onClick={handleSortZa}>
           sort by z-a
         </button>
-        <button className="dateSort" onClick={handleSortRelease}>
-          release date
+        <button className="btn" onClick={handleSortRelease}>
+          Release date
+        </button>
+        <button className="btn" onClick={handleSortPrice}>
+          Price
         </button>
       </div>
       <div className="cards">
         <div className="cards__container">
           <div className="cards__wrapper">
-            <ul className="cards__items">
+            <div className="cards__items">
               {albums.map((album, index) => (
                 <AlbumCard
                   key={index}
@@ -53,7 +59,7 @@ function AlbumCardPage() {
                   image={album.artworkUrl100}
                 />
               ))}
-            </ul>
+            </div>
           </div>
         </div>
       </div>
