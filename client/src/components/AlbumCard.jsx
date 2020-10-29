@@ -16,13 +16,13 @@ const AlbumCard = ({ id, albumname, artistname, image }) => {
           style={{ width: 150, margin: 10, height: 280 }}
           onClick={() => handleClick(id)}
         >
-          <figure className="cards__item__pic-wrap">
+          
             <Card.Img
               className="cards__item__img"
               src={image}
               alt="Album Image"
             />
-          </figure>
+          
           <Card.Body className="cards__item__info">
             <Card.Title>
               <h5 className="cards__album__text">{albumname}</h5>
