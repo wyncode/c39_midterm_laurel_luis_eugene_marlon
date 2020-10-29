@@ -31,7 +31,7 @@ function AlbumCardPage() {
   return (
     <>
       <div className="sortButtons">
-        <button className="dateSort" onClick={handleSortRelease}>
+        <button className="dateSort"style={{ color: 'crimson'}}onClick={handleSortRelease}>
           Sort By Release Date
         </button>
       </div>
