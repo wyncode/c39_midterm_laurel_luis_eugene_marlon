@@ -1,9 +1,9 @@
 import React, { useState, useEffect } from 'react';
 import { useParams } from 'react-router-dom';
 import axios from 'axios';
-import { BiPlayCircle} from 'react-icons/bi';
-import Aos from "aos"
-import "aos/dist/aos.css"
+import { BiPlayCircle } from 'react-icons/bi';
+import Aos from 'aos';
+import 'aos/dist/aos.css';
 
 const AlbumPage = ({ handleChange }) => {
   const [album, setAlbum] = useState([]);
@@ -15,7 +15,7 @@ const AlbumPage = ({ handleChange }) => {
     const fetchData = async () => {
       let response = await axios.get(`/album/${id}`);
       setAlbum(response.data.results);
-      Aos.init({ duration: 3000});
+      Aos.init({ duration: 3000 });
     };
     fetchData();
   }, [id]);
@@ -26,11 +26,9 @@ const AlbumPage = ({ handleChange }) => {
     audio.play();
     if (play) {
       audio.pause();
-    }  
+    }
   };
 
-
-  
   return (
     <div data-aos="slide-up" class="AlbumPageContainer">
       <img
@@ -39,7 +37,7 @@ const AlbumPage = ({ handleChange }) => {
         src={album[0]?.artworkUrl100}
         alt="albumcover"
       />
-      
+
       <h3 class="AlbumsText" id="AlbumNames">
         {album[0]?.collectionName} {album[0]?.contentAdvisoryRating}
       </h3>
@@ -51,20 +49,16 @@ const AlbumPage = ({ handleChange }) => {
       </h6>
 
       {album.map((track, index) => {
-        return (
-          //   // <div >
-          //  //<audio src={track.previewUrl}>
-          // <button onClick={}>Play</button>
-          //  </audio>
-          //  </div>
+        return track.hasOwnProperty('trackId') ? (
           <div key={index}>
-          <ul>
-          <li class="AlbumsText" id="songlist">
-              <BiPlayCircle onClick={() => handleSong(track.previewUrl)} /> {track.trackName}
-            </li>
+            <ul>
+              <li class="AlbumsText" id="songlist">
+                <BiPlayCircle onClick={() => handleSong(track.previewUrl)} />{' '}
+                {track.trackName}
+              </li>
             </ul>
           </div>
-        );
+        ) : null;
       })}
     </div>
   );
